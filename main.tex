@@ -56,7 +56,8 @@
         \section{专业技能}
 
         \textbf{编程语言} - Java \\
-        \textbf{开源框架} - Spring，Dubbo，Zookeeper，Tair，Redis，Metaq，MNS
+        \textbf{开源框架} - Spring，Dubbo，Zookeeper，Tair，Redis，Metaq，MNS\\
+        \textbf{工作领域} - SDN网络应用层 \\
 
 
 %----------------------------------------------------------------------------------------
@@ -64,38 +65,62 @@
 %----------------------------------------------------------------------------------------
         \section{工作经历}
         阿里云计算有限公司  \hfill 2019年至今
+
+
+        高速通道  （Express Connect）
         \\
 %\setlist[itemize]{
         \begin{itemize}[leftmargin=*]
 
 
-            \item \textbf{{Cloud Security Java Application }}: Built this undergrad project using Java Swings. The application focuses on simulation of a highly secure Cloud application using Homomorphic Encrytion Scheme.
+            \item \textbf{{产品功能 }}: 用户IDC机房接入云上网络。
 
-            \item \textbf{{Face Authorization Surveillance }} : Built a system application that detects and recognizes
-            multiple authorized persons in real-time by employing the Eigen Faces algorithm using the HAAR Cascade Classifiers.
-
-            \item \textbf{{Custom UNIX Shell}} : Developed an Unix shell with custom commands by creating an own parser that parses and tokenizes the input and performs specific operations.
-
-            \item \textbf{{Young's Double Slit Simulation }}: A Mini-project that simulates the infamous Young's Double Slit Experiment using OpenGL and SOX .
+            \item \textbf{{流量转发}} : 通过阿里接入交换机CSW和用户机房交换机相连，CSW将用户侧流量做vxlan封装后，转发到云上阿里虚拟交换机AVS，即可实现用户机房和云上资源的联通。
 
         \end{itemize}
 
 
 
-        阿里云计算有限公司  \hfill 2019年至今
+        任播弹性公网IP（AnycastEIP）
         \\
 %\setlist[itemize]{
         \begin{itemize}[leftmargin=*]
 
 
-            \item \textbf{{Cloud Security Java Application }}: Built this undergrad project using Java Swings. The application focuses on simulation of a highly secure Cloud application using Homomorphic Encrytion Scheme.
+            \item \textbf{{产品功能 }}: 覆盖全球的公网访问加速产品。
 
-            \item \textbf{{Face Authorization Surveillance }} : Built a system application that detects and recognizes
-            multiple authorized persons in real-time by employing the Eigen Faces algorithm using the HAAR Cascade Classifiers.
+            \item \textbf{{流量转发 }}:通过阿里路由器IGW在全球20+个站点宣告BGP路由，用户请求会走就近站点进入IGW，IGW将请求经过内部专线转发到阿里云上服务，通过走专线的方式提高网络质量。
 
-            \item \textbf{{Custom UNIX Shell}} : Developed an Unix shell with custom commands by creating an own parser that parses and tokenizes the input and performs specific operations.
+        \end{itemize}
 
-            \item \textbf{{Young's Double Slit Simulation }}: A Mini-project that simulates the infamous Young's Double Slit Experiment using OpenGL and SOX .
+
+        巡检系统开发
+        \\
+%\setlist[itemize]{
+        \begin{itemize}[leftmargin=*]
+
+
+            \item \textbf{{项目背景 }}: 多个系统间数据不一致，例如用户看到的配置和网络底层配置不一致，会导致网络产品行为不符合用户预期，不一致数据是系统风险，需要进行对比，及时发现线上风险。
+
+            \item \textbf{{实现概述 }} : 定时从多个只读数据库查询数据并进行对比的方式，来发现和解决多个系统间的数据库数据不一致问题，发现并收敛上百个风险点，提高系统稳定性。
+
+            \item \textbf{{项目难点 }} : 多个系统数据库数据更新时间有时间差，通过多次校验异常数据的方式，减少误报数据。
+
+        \end{itemize}
+
+
+        本地集成测试系统开发
+        \\
+%\setlist[itemize]{
+        \begin{itemize}[leftmargin=*]
+
+
+            \item \textbf{{项目背景 }}: 本地构建测试环境困难，需要手动插入sql，代码可复用性弱。测试场景校验DB困难，需要通过sql查询出db内容，再去校验是否符合预期。
+
+            \item \textbf{{实现概述 }} :通过在内存中一键创建JavaBean，支持将JavaBean映射为sql存储数据库，解决构造依赖资源困难的问题。测试结束自动将JavaBean和数据库数据对比，解决了校验数据库操作复杂的问题。提高测试开发效率。
+
+            \item \textbf{{项目难点}} : 性能优化：通过Druid的Filter来记录测试时操作的表，对比和清理表时，去对比操作过的表，而不是捞取全部表来对比和清理。
+
 
         \end{itemize}
 
